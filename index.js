@@ -24,7 +24,7 @@ var gjslinterfixer = function(opts) {
 
     var fixedFile = fixer(file, opts);
 
-    if (!opts.verbose) {
+    if (opts.verbose) {
       gutil.log('[' + colors.green(PLUGIN_NAME) + '] fixed file ' + colors.blue(fixedFile));
     }
 
