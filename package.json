@@ -1,0 +1,34 @@
+{
+  "name": "gjslinter-fixer",
+  "description": "Stream wrapper to fix source files according to output of Google Closure Linter for Coffeescript",
+  "keywords": [
+    "closure-linter",
+    "gjslinter-fixer",
+    "gjslinter"
+  ],
+  "version": "0.0.1",
+  "homepage": "https://github.com/gobie/gjslinter-fixer",
+  "author": {
+    "name": "Michal Brašna",
+    "email": "michal.brasna@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gobie/gjslinter-fixer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gobie/gjslinter-fixer/issues"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {},
+  "dependencies": {
+    "gulp-util": "^3.0.3",
+    "merge": "^1.2.0",
+    "through2": "^0.6.3"
+  },
+  "devDependencies": {}
+}
