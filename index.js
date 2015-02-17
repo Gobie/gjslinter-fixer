@@ -10,7 +10,7 @@ var PluginError = gutil.PluginError;
 var PLUGIN_NAME = 'gjslinter-fixer';
 
 var gjslinterfixer = function(opts) {
-  opts = merge({map: []}, opts);
+  opts = merge({map: [], verbose: false}, opts);
 
   function transform(file, enc, cb) {
 
@@ -22,7 +22,11 @@ var gjslinterfixer = function(opts) {
       return cb(new PluginError(PLUGIN_NAME, 'Streaming is not supported'));
     }
 
-    fixer(file, opts);
+    var fixedFile = fixer(file, opts);
+
+    if (!opts.verbose) {
+      gutil.log('[' + colors.green(PLUGIN_NAME) + '] fixed file ' + colors.blue(fixedFile));
+    }
 
     return cb(null, file);
   };
